@@ -15,5 +15,5 @@ ngpus=$(( 4 * $nodes ))
 mem=$((380 * $nodes))
 jobfs=$(( 200 * $nodes ))
 
-echo qsub -I -q gpuvolta  -P ${project} -l walltime=05:00:00,ncpus=$ncpus,ngpus=$ngpus,mem=${mem}GB,jobfs=${jobfs}GB,storage=scratch/p00,wd
-qsub -I -q gpuvolta  -P ${project} -l walltime=05:00:00,ncpus=$ncpus,ngpus=$ngpus,mem=${mem}GB,jobfs=${jobfs}GB,storage=scratch/p00,wd
+echo qsub -I -q gpuvolta  -P ${project} -l walltime=10:00:00,ncpus=$ncpus,ngpus=$ngpus,mem=${mem}GB,jobfs=${jobfs}GB,storage=scratch/p00,wd
+qsub -I -q gpuvolta  -P ${project} -l walltime=10:00:00,ncpus=$ncpus,ngpus=$ngpus,mem=${mem}GB,jobfs=${jobfs}GB,storage=scratch/p00,wd
